@@ -6,10 +6,12 @@ this code generates echo for the user as user sends any sentence and it exits on
 
 Type to echo : 
 hello form other side
+
 You said :hello form other side
  
 Type to echo : 
 echoooooooo
+
 You said :echoooooooo
  
 Type to echo : 
