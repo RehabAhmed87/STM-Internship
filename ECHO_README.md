@@ -14,8 +14,6 @@ echoooooooo
 
 You said :echoooooooo
  
-Type to echo : 
-
-exit
+Type to echo : exit
 
 Good bye.
