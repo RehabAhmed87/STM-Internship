@@ -1,32 +1,23 @@
 #include <stdio.h>
-#include <string.h>
 
-#define MAX_SENTENCE_LENGTH 100
-void echo (char *sentence);
-int main ()
+int main(int argc, char *argv[])
 {
-	int flag=1;
-	char sen[MAX_SENTENCE_LENGTH];
-	do
-	{
-	 printf("Type to echo : \n");
-	fgets(sen,MAX_SENTENCE_LENGTH,stdin);
-
-	if ((strncmp(sen,"exit",4)==0))
-	{
-	printf("Good bye.\n");
-	flag=0;
+    if (argc == 1) {
+	printf
+	    ("wrong usage type  ./myecho \"sentence\" or ./myecho sentence\n");
+	//if i wrote sentence in double quotes it will be taken as one argument
+	// if i wrote it without double quotes it will be multiple arguments that i should loop for printing each one 
+	return -1;
+    } else if (argc == 2) {
+	printf("echo : %s\n", argv[1]);
+	return 0;
+    } else {
+	printf("echo : ");
+	for (int i = 1; i < argc; i++) {
+	    // looping from 1 to argc as argv[0] is function name
+	    // argv[argc] = NULL
+	    printf("%s ", argv[i]);
 	}
-	else
-	{
-	echo(sen);
-	}
-
-	}while (flag);
+	printf("\n");
+    }
 }
-void echo (char *sentence)
-{
-        printf("You said :%s \n", sentence);
-
-}
-
